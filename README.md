@@ -1,13 +1,15 @@
 ## Quick Instructions
 
-Clone this repo into your `_ur_addons` directory as follows:
+Clone this repo into your URSYS `_ur_addons` directory as follows:
 ```
 cd _ur_addons
-git clone -b main --depth 1 --single-branch https://github.com/dsriseah/ursys-x-addon.git x-myaddon
+git clone --depth 1 https://github.com/dsriseah/ursys-x-addon.git x-myaddon
 rm -fr x-myaddon/.git/
 ```
-
 This creates a `x-myaddon` directory. **User addons must use the `x-` prefix otherwise they will be added to URSYS core.** The main `.gitignore` file in URSYS excludes anything matching the `_ur_addons/x-*` pattern.
+
+> [!TIP]
+> Fork this repo and rename it `x-yourname` if you want to retain source control. The name should be something easy to type on the command line, as the name of the folder is the same as the name of the command you execute with the **ur** script
 
 You can then run the addon from the `_ur` directory using the **ur** command-line script without any arguments, which will list all available
 addons. For this example, running **ur x-myaddon** will run the addon.
