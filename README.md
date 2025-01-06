@@ -3,7 +3,7 @@
 Clone this repo into your URSYS `_ur_addons` directory as follows:
 ```
 cd _ur_addons
-git clone --depth 1 https://github.com/dsriseah/ursys-x-addon.git x-myaddon
+git clone --depth 1 https://github.com/dsriseah/ursys-x-sna-addon.git x-myaddon
 rm -fr x-myaddon/.git/
 ```
 This creates a `x-myaddon` directory. **User addons must use the `x-` prefix otherwise they will be added to URSYS core.** The main `.gitignore` file in URSYS excludes anything matching the `_ur_addons/x-*` pattern.
@@ -11,14 +11,36 @@ This creates a `x-myaddon` directory. **User addons must use the `x-` prefix oth
 > [!TIP]
 > Fork this repo and rename it `x-yourname` if you want to retain source control. The name should be something easy to type on the command line, as the name of the folder is the same as the name of the command you execute with the **ur** script
 
-You can then run the addon from the `_ur` directory using the **ur** command-line script without any arguments, which will list all available
-addons. For this example, running **ur x-myaddon** will run the addon.
-
 See [Addon Framework](https://github.com/dsriseah/ursys/wiki/URSYS-Addons-Framework) for more information about the addon system.
 
 ## Example Addon Features
 
 This addon uses the [SNA Framework](https://github.com/dsriseah/ursys/wiki/Overview-of-SNA) to simplify URSYS development. This makes it easy to start a development webserver and run server scripts for quick-and-dirty module development.
+
+## Running the Addon
+
+**1. list available addons**
+```
+cd _ur
+ur
+```
+This will list all the addons installed in this particular URSYS instance. There are several built-in addons. The `x-myaddon` addon you added will also appear in this list.
+
+**2. run the addon**
+```
+ur x-myaddon
+```
+Note that **terminal output** and also browse to **http://localhost:8080** and open the Javascript console.
+
+See the [SNA Framework](https://github.com/dsriseah/ursys/wiki/Overview-of-SNA) documentation for more information.
+
+## Directory Structure and Order of Execution
+
+The URSYS Addon System runs the first `@` file it finds in the addon directory, whichin this case is `@server.mts`. This short file does several things:
+* compiles the webapp by scanning for `.ts` files in `app-source` directory using esbuild
+* starts the websocket and webserver systems with URNET support
+* dynamically scans and loads `.mts` files in the `app-source` directory 
+* serves the `index.html` file that was copied from `app-static`
 
 
 
