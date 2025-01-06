@@ -1,0 +1,11 @@
+# don't commit _nocommit files or directories
+*_nocommit*
+
+# ignore generated directories and files
+# _runtime is used by apps in the root level of the framework
+_public
+_dist
+**/_dist
+/runtime
+**/_runtime*
+**/__app_imports.ts
