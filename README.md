@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repo is dependent on having already installed [URSYS](https://github.com/dsriseah/ursys).
+
 ## Quick Instructions
 
 Clone this repo into your URSYS `_ur_addons` directory as follows:
