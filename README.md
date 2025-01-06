@@ -45,6 +45,11 @@ The URSYS Addon System runs the first `@` file it finds in the addon directory, 
 * dynamically scans and loads `.mts` files in the `app-source` directory 
 * serves the `index.html` file that was copied from `app-static`
 
+## Future Expansion
+
+The Addon system facilitates the creation of URSYS-based code modules that can be included as a standalone library, though the process of including such modules is not yet automated. Addons currently are most useful for developing concepts that are eventually moved into the main URSYS CORE repository.
+
+
 
 
 
