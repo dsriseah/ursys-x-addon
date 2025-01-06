@@ -9,7 +9,7 @@ rm -fr x-myaddon/.git/
 This creates a `x-myaddon` directory. **User addons must use the `x-` prefix otherwise they will be added to URSYS core.** The main `.gitignore` file in URSYS excludes anything matching the `_ur_addons/x-*` pattern.
 
 > [!TIP]
-> Fork this repo and rename it `x-yourname` if you want to retain source control. The name should be something easy to type on the command line, as the name of the folder is the same as the name of the command you execute with the **ur** script
+> If you want to retain source control, fork this repo and rename it `x-yourname`. The name should be something easy to type on the command line, as the name of the folder is the same as the name of the command you execute with the **ur** script
 
 See [Addon Framework](https://github.com/dsriseah/ursys/wiki/URSYS-Addons-Framework) for more information about the addon system.
 
